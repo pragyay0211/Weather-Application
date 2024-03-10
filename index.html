@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div>
+      <h4 class="header">Weather Application</h4>
+      <h1 class="header-text">Keeps you updated, Start your small talks</h1>
+    </div>
+    <div class="city-selection">
+      <div class="city-inputs">
+        <input type="text" placeholder="Enter city name">
+        <input type="text" placeholder="Enter city name">
+        <input type="text" placeholder="Enter city name">
+        <input type="text" placeholder="Enter city name">
+      </div>
+      <div class="get-weather">
+        <button class="select-cities-btn">Get Weather</button>
+      </div>
+    </div>
+    <div class="weather-cards"></div>
+
+    <!-- Weather Card Template -->
+    <template id="weather-card-template">
+      <div class="weather-card">
+        <img class="weather-icon" src="" alt="Weather Icon">
+        <div class="temp">
+          <span class="numb"></span>
+          <span class="deg">°C</span>
+        </div>
+        <div class="weather"></div>
+        <div class="location">
+          <span></span>
+        </div>
+        <div class="bottom-details">
+          <div class="column feels">
+            <div class="details">
+              <div class="temp">
+                <span class="numb-2"></span>
+                <span class="deg">°C</span>
+              </div>
+              <p>Feels like</p>
+            </div>
+          </div>
+          <div class="column humidity">
+            <div class="details">
+              <span class="humidity_percent"></span>
+              <p>Humidity</p>
+            </div>
+          </div>
+        </div>
+        <div class="notification-settings">
+          <label>
+            <input type="checkbox" class="notification-checkbox" data-city="">
+            Receive notifications for this city
+          </label>
+          <div class="notification-conditions">
+            <label>
+              <input type="checkbox" class="notification-condition" data-condition="Rain">
+              Rain
+            </label>
+            <label>
+              <input type="checkbox" class="notification-condition" data-condition="Snow">
+              Snow
+            </label>
+            <label>
+              <input type="checkbox" class="notification-condition" data-condition="Extreme">
+              Extreme Temperature
+            </label>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
